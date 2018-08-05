@@ -39,9 +39,9 @@ ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 RUN $INST_SCRIPTS/tigervnc.sh && \
     $INST_SCRIPTS/no_vnc.sh && \
     $INST_SCRIPTS/chrome.sh && \
-    $INST_SCRIPTS/xfce_ui.sh
+    $INST_SCRIPTS/fluxbox_ui.sh
 
-ADD ./src/config/xfce/ $HOME/
+ADD ./src/config/fluxbox/ $HOME/
 
 ### configure startup
 RUN $INST_SCRIPTS/libnss_wrapper.sh
