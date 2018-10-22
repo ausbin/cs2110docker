@@ -23,7 +23,7 @@ echo Found Docker Installation. Checking for existing containers.
 
 existingContainers=$(docker ps -a | grep $imageName | awk '{print $1}')
 echo $existingContainers
-if [ $existingContainers ]; then
+if [[ -n $existingContainers ]]; then
 	echo Found CS 2110 containers. Stopping and removing them.
 	docker stop $existingContainers >/dev/null
 	docker rm $existingContainers >/dev/null
